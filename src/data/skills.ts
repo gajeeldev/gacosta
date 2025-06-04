@@ -7,7 +7,8 @@ import HtmlIcon from '../components/Icons/HtmlIcon.astro'
 import JavascriptIcon from '../components/Icons/JavascriptIcon.astro'
 import MongoIcon from '../components/Icons/MongoIcon.astro'
 import ReactIcon from '../components/Icons/ReactIcon.astro'
-import SqlIcon from '../components/Icons/SqlIcon.astro'
+import SqliteIcon from '../components/Icons/SqliteIcon.astro'
+import SqlServerIcon from '../components/Icons/SqlServerIcon.astro'
 import TailWindIcon from '../components/Icons/TailWindIcon.astro'
 import TypescriptIcon from '../components/Icons/TypescriptIcon.astro'
 
@@ -28,6 +29,7 @@ export const toolsAndFrameworks = [
 ]
 
 export const backend = [
-	{name: 'SQL', component: SqlIcon},
+	{name: 'SQL Server', component: SqlServerIcon},
 	{name: 'MongoDB', component: MongoIcon},
+	{name: 'SQLite', component: SqliteIcon},
 ]

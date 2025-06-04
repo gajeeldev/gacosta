@@ -1,0 +1,83 @@
+---
+import CalendarIcon from "../Icons/CalendarIcon.astro";
+import ExternalLinkIcon from "../Icons/ExternalLinkIcon.astro";
+import MapPinIcon from "../Icons/MapPinIcon.astro";
+import {experiences} from '../../data/experiences'
+
+
+---
+
+<section
+	class='flex flex-col items-center mt-20 w-full mx-auto max-w-5xl'
+	id='experiences'
+>
+	<h2 class='text-2xl font-bold mb-8 text-center'>Experiencia</h2>
+
+  <div class="relative">
+    <!-- Timeline line -->
+    <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+
+    <div class="space-y-12">
+      {experiences.map((exp) => (
+        <div class="relative">
+          <!-- Timeline dot -->
+          <div class="absolute left-8 -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white z-10"></div>
+
+          <!-- Content -->
+          <div class="ml-16">
+            <div class="group bg-white dark:bg-[#2e2e2e] rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border-2 hover:border-blue-600/20 p-6">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
+                  <img
+                    src={exp.logo}
+                    alt={`${exp.company} logo`}
+                    width="32"
+                    height="32"
+                    class="rounded"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-xl text-[#252525] dark:text-[#F5F5F5] font-semibold group-hover:text-blue-600 transition-colors">
+                    {exp.position}
+                  </h3>
+                  <p class="text-base font-medium text-gray-800 mb-2">
+                    <a
+                      href={exp.companyUrl}
+                      class="hover:text-blue-600 transition-colors inline-flex items-center gap-1 text-[#252525] dark:text-[#F5F5F5]"
+                    >
+                      {exp.company}
+                      <ExternalLinkIcon />
+                    </a>
+                  </p>
+                  <div class="flex flex-col sm:flex-row sm:items-center gap-2 text-sm text-gray-500">
+                    <div class="flex items-center gap-1 text-gray-700 dark:text-gray-200">
+                      <CalendarIcon />
+                      {exp.startDate} - {exp.endDate} • {exp.duration}
+                    </div>
+                    <div class="flex items-center gap-1 text-gray-700 dark:text-gray-200">
+                      <MapPinIcon />
+                      {exp.location}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4">
+                <p class=" mb-4 leading-relaxed text-gray-700 dark:text-gray-200">{exp.description}</p>
+
+                <div class="flex flex-wrap gap-2">
+                  {exp.technologies.map((tech, techIndex) => (
+                    <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
