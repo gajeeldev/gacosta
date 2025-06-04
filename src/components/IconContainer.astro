@@ -1,0 +1,14 @@
+---
+interface Props {
+	shadowColor: string
+	borderColor: string
+}
+
+const {shadowColor, borderColor} = Astro.props
+---
+
+<div
+	class={`h-36 w-40 rounded-md flex justify-evenly items-center flex-col shadow drop-shadow-md ${shadowColor} ${borderColor} border-2 border-transparent transition duration-300 ease-in-out`}
+>
+	<slot />
+</div>

@@ -1,0 +1,23 @@
+---
+import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title='404 - Oooops esta pagina fue encontrada'>
+	<main class='w-full'>
+		<div class='flex flex-col justify-center items-center mb-32'>
+			<h1 class='text-[5rem] md:text-[15rem] font-bold text-[#252525] dark:text-[#F5F5F5]'>404</h1>
+			<span class='text-[#252525] dark:text-[#F5F5F5] font-medium text-2xl'
+				>Oooops esta pagina no fue encontrada</span
+			>
+			<a
+				class='inline-block rounded mt-5 border border-current px-8 py-3 text-sm font-medium text-[#252525] transition hover:scale-110 duration-300 hover:shadow-xl focus:outline-none focus:ring active:text-[#252525] dark:text-[#F5F5F5]'
+				href='/'
+			>
+				Volver al inicio
+			</a>
+		</div>
+
+		<Footer />
+	</main>
+</Layout>

@@ -1,0 +1,80 @@
+---
+import SkillCard from '../SkillCard.astro'
+
+import {frontend, toolsAndFrameworks, backend} from '../../data/skills'
+---
+
+<section id='skills' class='mt-24 mb-16'>
+	<h3 class='text-2xl font-bold mb-8 text-center'>Habilidades</h3>
+
+	<div class='grid grid-cols-1 gap-8'>
+		{/* Frontend */}
+		<div
+			class='bg-white dark:bg-[#2e2e2e] rounded-lg shadow-md p-6 transition-colors'
+		>
+			<h4 class='text-xl font-semibold mb-6'>Frontend</h4>
+			<div
+				class='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:w-full'
+			>
+				{
+					frontend.map((skill) => (
+						<SkillCard name={skill.name} IconComponent={skill.component} />
+					))
+				}
+			</div>
+		</div>
+
+		{/* Herramientas y Frameworks */}
+		<div
+			class='bg-white dark:bg-[#2e2e2e] rounded-lg shadow-md p-6 transition-colors'
+		>
+			<h4 class='text-xl font-semibold mb-6'>Herramientas y Frameworks</h4>
+			<div
+				class='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:w-full'
+			>
+				{
+					toolsAndFrameworks.map((skill) => (
+						<SkillCard name={skill.name} IconComponent={skill.component} />
+					))
+				}
+			</div>
+		</div>
+
+		{/* Backend */}
+		<div
+			class='bg-white dark:bg-[#2e2e2e] rounded-lg shadow-md p-6 transition-colors'
+		>
+			<h4 class='text-xl font-semibold mb-6'>Backend</h4>
+			<div
+				class='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:w-full'
+			>
+				{
+					backend.map((skill) => (
+						<SkillCard name={skill.name} IconComponent={skill.component} />
+					))
+				}
+			</div>
+		</div>
+
+		{/* Idiomas */}
+		<div
+			class='bg-white dark:bg-[#2e2e2e] rounded-lg shadow-md p-6 transition-colors'
+		>
+			<h4 class='text-xl font-semibold mb-4'>Idiomas</h4>
+			<div class='flex flex-wrap gap-4'>
+				<div
+					class='flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-[#333333] rounded-full transition-colors'
+				>
+					<span class='text-lg'>🇪🇸</span>
+					<span class='font-medium'>Español (Nativo)</span>
+				</div>
+				<div
+					class='flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-[#333333] rounded-full transition-colors'
+				>
+					<span class='text-lg'>🇺🇸</span>
+					<span class='font-medium'>Inglés (Intermedio)</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,10 @@
+---
+const {name, IconComponent} = Astro.props
+---
+
+<div class='flex flex-col items-center'>
+	<div class='flex items-center justify-center mb-2 p-2 transition-colors'>
+		<IconComponent class='max-w-full max-h-full' />
+	</div>
+	<span class='text-center font-medium'>{name}</span>
+</div>

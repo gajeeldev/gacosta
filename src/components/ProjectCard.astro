@@ -1,0 +1,47 @@
+---
+interface Props {
+	title: string
+	body: string
+	href: string
+	img: string
+}
+
+const {href, title, body, img} = Astro.props
+---
+
+<article
+	class='overflow-hidden rounded-lg border border-gray-100 shadow-sm transition hover:shadow-xl duration-300'
+>
+	<img
+		alt={`${title} Logo`}
+		loading='lazy'
+		src={img}
+		class='h-56 w-full object-cover'
+	/>
+
+	<div class='p-4 sm:p-6'>
+		<div>
+			<h3 class='text-lg font-medium'>
+				{title}
+			</h3>
+
+			<p
+				class='mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-300'
+			>
+				{body}
+			</p>
+		</div>
+
+		<a
+			href={href}
+			target='_blank'
+			class='group mt-4 inline-flex items-center gap-1 text-sm font-medium border-2 px-6 py-3 rounded-md'
+		>
+			View
+
+			<span aria-hidden='true' class='block transition-all group-hover:ms-0.5'>
+				👀
+			</span>
+		</a>
+	</div>
+</article>

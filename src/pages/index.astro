@@ -1,0 +1,20 @@
+---
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+import AboutSection from '../components/sections/AboutSection.astro'
+import MainSection from '../components/sections/MainSection.astro'
+import ProjectsSection from '../components/sections/ProjectsSection.astro'
+import SkillsSection from '../components/sections/SkillsSection.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title='Gacosta'>
+	<main class='w-full max-w-[1024px] mx-auto flex-1'>
+		<Header />
+		<MainSection />
+		<!-- <AboutSection /> -->
+		<ProjectsSection />
+		<SkillsSection />
+		<Footer />
+	</main>
+</Layout>

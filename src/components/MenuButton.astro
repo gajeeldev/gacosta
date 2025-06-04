@@ -1,0 +1,59 @@
+---
+import HomeIcon from './Icons/HomeIcon.astro'
+import MenuMobileIcon from './Icons/MenuMobileIcon.astro'
+import ProjectsIcon from './Icons/ProjectsIcon.astro'
+import SkillsIcon from './Icons/SkillsIcon.astro'
+import ThemeToggle from './ThemeToggle.astro'
+---
+
+<script>
+	const menuButton = document.querySelector('#menu-button')
+	const menuMobileContainer = document.querySelector('#menu-mobile-container')
+
+	menuButton.addEventListener('click', () => {
+		menuMobileContainer.classList.toggle('hidden')
+	})
+</script>
+
+<div
+	id='menu-mobile-container'
+	class='fixed right-5 bottom-16 hidden sm:hidden z-20'
+>
+	<ul class='flex flex-col gap-1'>
+		<li
+			class='h-10 w-10 rounded-full bg-[#f5f5f5] dark:bg-[#252525] shadow-md drop-shadow-md flex items-center justify-center'
+		>
+			<a href='#home' aria-label='go to home'>
+				<HomeIcon />
+			</a>
+		</li>
+		<li
+			class='h-10 w-10 rounded-full bg-[#f5f5f5] dark:bg-[#252525] shadow-md drop-shadow-md flex items-center justify-center'
+		>
+			<a href='#projects' aria-label="go to projects">
+				<ProjectsIcon />
+			</a>
+		</li>
+		<li
+			class='h-10 w-10 rounded-full bg-[#f5f5f5] dark:bg-[#252525] shadow-md drop-shadow-md flex items-center justify-center'
+		>
+			<a href='#skills' aria-label="go to skills">
+				<SkillsIcon />
+			</a>
+		</li>
+
+		<li
+			class='h-10 w-10 rounded-full bg-[#f5f5f5] dark:bg-[#252525] shadow-md drop-shadow-md flex items-center justify-center'
+		>
+			<ThemeToggle isMobile={true} />
+		</li>
+	</ul>
+</div>
+<button
+	id='menu-button'
+	name="menu-button"
+	aria-label="open menu"
+	class='flex items-center justify-center fixed right-5 bottom-5 z-20 sm:hidden h-10 w-10 rounded-full bg shadow-md drop-shadow-md bg-[#f5f5f5] dark:bg-[#252525]'
+>
+	<MenuMobileIcon />
+</button>
