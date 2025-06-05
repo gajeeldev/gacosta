@@ -10,7 +10,7 @@ export const experiences = [
 			'Desarrollo de funcionalidades en Microsoft Dynamics 365 FO y Business Central. Soporte y mejoras para procesos empresariales. Automatización de tareas operativas.',
 		technologies: ['React', 'C#', 'TypeScript', 'Material UI', 'AL'],
 		companyUrl: 'https://www.logicone.com.do/',
-		logo: '/public/img/companies/logicone-logo.webp',
+		logo: '/img/companies/logicone-logo.webp',
 	},
 	{
 		company: 'Arnaiz RD',
@@ -28,7 +28,7 @@ export const experiences = [
 			'Microsoft Office',
 		],
 		companyUrl: 'https://www.institutoarnaiz.com/',
-		logo: '/public/img/companies/instituto-arnaiz-logo.webp',
+		logo: '/img/companies/instituto-arnaiz-logo.webp',
 	},
 	{
 		company: 'iTelle Corp',
@@ -51,7 +51,7 @@ export const experiences = [
 			'Node.js',
 		],
 		companyUrl: 'https://itellemedia.com/',
-		logo: '/public/img/companies/itelle-logo.webp',
+		logo: '/img/companies/itelle-logo.webp',
 	},
 	{
 		company: 'SoftOne S.R.L',
@@ -64,7 +64,7 @@ export const experiences = [
 			'Soporte y mantenimiento de sistema ERP. Consultas y respaldo de bases de datos Oracle. Mejora de experiencia de usuario y creación de procesos automáticos.',
 		technologies: ['SQL', 'Delphi', 'Teamviewer'],
 		companyUrl: 'https://www.softonerd.com/',
-		logo: '/public/img/companies/softone-logowebp.webp',
+		logo: '/img/companies/softone-logowebp.webp',
 	},
 	{
 		company: 'Arnaiz Consultorias RD',
@@ -82,6 +82,6 @@ export const experiences = [
 			'Microsoft Office',
 		],
 		companyUrl: 'https://www.a-arnaiz.es/',
-		logo: '/public/img/companies/arnaiz-logo.webp',
+		logo: '/img/companies/arnaiz-logo.webp',
 	},
 ]
